@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Loja Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Bem-vindo à Loja!</h1>
+
+  <section id="produtos">
+    <!-- Exemplo de produtos -->
+    <div class="produto">
+      <h2>Camisa</h2>
+      <p>R$ 49,90</p>
+      <button onclick="adicionarProduto('001', 'Camisa', 49.90)">Adicionar</button>
+    </div>
+    <div class="produto">
+      <h2>Calça</h2>
+      <p>R$ 89,90</p>
+      <button onclick="adicionarProduto('002', 'Calça', 89.90)">Adicionar</button>
+    </div>
+    <div class="produto">
+      <h2>Tênis</h2>
+      <p>R$ 149,90</p>
+      <button onclick="adicionarProduto('003', 'Tênis', 149.90)">Adicionar</button>
+    </div>
+  </section>
+
+  <h2>Carrinho de Compras</h2>
+
+  <table id="carrinho">
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Valor Unitário</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Itens do carrinho -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3" style="text-align: right; font-weight: bold;">Total Geral:</td>
+        <td id="total-geral">R$ 0,00</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Modal de saída -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Não vá embora!</h2>
+      <p>Confira nossas ofertas especiais antes de sair!</p>
+      <button onclick="fecharModal()">Continuar Comprando</button>
+    </div>
+  </div>
+
+  <!-- Música de boas-vindas -->
+  <audio id="musica" autoplay loop>
+    <source src="URL_DA_MUSICA.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
